@@ -23,8 +23,8 @@ enum class Destination(
     val route: String,
     val label: String
 ) {
-    HOME("home", "home"),
-    RESUME("resume", "resume")
+    HOME("Home", "Home"),
+    RESUME("Resume", "Resume")
 }
 
 @Composable
@@ -89,7 +89,7 @@ fun HeaderWithTabs() {
             }
         }
         HorizontalDivider(
-            modifier = Modifier,
+            modifier = Modifier.padding(bottom = 8.dp),
             thickness = DividerDefaults.Thickness,
             color = DividerDefaults.color
         )
