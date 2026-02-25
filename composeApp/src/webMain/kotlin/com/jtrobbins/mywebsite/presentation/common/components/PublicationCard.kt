@@ -11,22 +11,22 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun PublicationCard(
-    title: String,
     authors: String,
+    title: String,
     publication: String
 ) {
     CustomCard {
         Column(
             modifier = Modifier
-                .padding(horizontal = 16.dp)
+                .padding(horizontal = 16.dp, vertical = 16.dp)
         ) {
             Text(
-                text = title,
-                style = MaterialTheme.typography.titleMedium,
+                text = authors,
+                style = MaterialTheme.typography.titleMedium
             )
             Text(
-                text = authors,
-                style = MaterialTheme.typography.bodyLarge
+                text = title,
+                style = MaterialTheme.typography.bodyLarge,
             )
             Text(
                 text = publication,

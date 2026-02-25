@@ -6,6 +6,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.jtrobbins.mywebsite.presentation.common.components.AwardCard
 import com.jtrobbins.mywebsite.presentation.common.components.CategoryItem
 import com.jtrobbins.mywebsite.presentation.common.components.EducationCard
 import com.jtrobbins.mywebsite.presentation.common.components.ExperienceCard
@@ -54,8 +55,8 @@ fun ResumeScreen() {
         }
         CategoryItem(title = "Publications") {
             PublicationCard(
-                title = "A case study of AI-enabled Software as a Medical Device cleared by the FDA for assessing hemorrhage risk index (APPRAISE-HRI) after trauma.",
                 authors = "Frock, A., J. T. Robbins, F. G. Vital-Lopez, V. Desai, G. Doros, B. E. Sands, A. Prabhakaran, C. Nemeth, G. T. Rule, J. L. Sperry, F. X. Guyette, S. R. Wisniewski, E. E. Moore, M. Schreiber, B. Joseph, C. T. Wilson, B. Cotton, D. Ostermayer, B. G. Harbrecht, M. B. Patel, S. Tamang, S. Malunjkar, D. A. Spain, A. T. Reisner, J. D. Stallings, and J. Reifman. ",
+                title = "A case study of AI-enabled Software as a Medical Device cleared by the FDA for assessing hemorrhage risk index (APPRAISE-HRI) after trauma.",
                 publication = "New England Journal of Medicine AI. 2025 October 16; 2(11):AIcs2401170."
             )
         }
@@ -63,7 +64,21 @@ fun ResumeScreen() {
 
         }
         CategoryItem(title = "Awards") {
-
+            AwardCard(
+                name = "Outstanding Research Accomplishment Team/Military",
+                granter = "Military Health System Research Symposium",
+                date = "2025",
+                description = "In recognition of outstanding research contributions supporting the warfighter with a " +
+                        "significant accomplishment of high impact by means of the development, submission, and " +
+                        "subsequent FDA clearance of The APPRAISE-HRI."
+            )
+            AwardCard(
+                name = "Certificate of Appreciation",
+                granter = "Henry M. Jackson Foundation for the Advancement of Military Medicine",
+                date = "2024",
+                description = "In recognition of expertise, dedication, and hard work, which provided a significant " +
+                        "contribution to the development, submission, and subsequent FDA clearance of The APPRAISE-HRI."
+            )
         }
         Footer()
     }

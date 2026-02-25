@@ -20,7 +20,8 @@ fun HomeScreen() {
     ) {
         CategoryItem(title = null) {
             DescriptionCard(
-                description = "Full-Stack Software Developer"
+                description = "Full-Stack Software Developer\n" +
+                        "Building robust applications and user experiences across frameworks and languages."
             )
         }
         Footer()
