@@ -12,6 +12,7 @@ import com.jtrobbins.mywebsite.presentation.common.components.EducationCard
 import com.jtrobbins.mywebsite.presentation.common.components.ExperienceCard
 import com.jtrobbins.mywebsite.presentation.common.components.Footer
 import com.jtrobbins.mywebsite.presentation.common.components.PublicationCard
+import com.jtrobbins.mywebsite.presentation.common.components.SkillCard
 
 @Composable
 fun ResumeScreen() {
@@ -61,7 +62,14 @@ fun ResumeScreen() {
             )
         }
         CategoryItem(title = "Skills") {
-
+            SkillCard(
+                category = "Programming:",
+                skills = listOf("Kotlin", "Python", "Dart", "Java", "SQL")
+            )
+            SkillCard(
+                category = "Tools:",
+                skills = listOf("Android", "Flutter", "Jetpack Compose", "Docker", "Git",)
+            )
         }
         CategoryItem(title = "Awards") {
             AwardCard(
