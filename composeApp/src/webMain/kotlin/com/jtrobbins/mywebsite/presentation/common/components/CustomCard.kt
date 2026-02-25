@@ -6,6 +6,7 @@ import androidx.compose.foundation.hoverable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsHoveredAsState
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -40,7 +41,7 @@ fun CustomCard(content: @Composable () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .height(intrinsicSize = IntrinsicSize.Min)
-            .padding(horizontal = 16.dp).hoverable(interactionSource = interactionSource),
+            .padding(horizontal = 16.dp, vertical = 8.dp).hoverable(interactionSource = interactionSource),
         shape = RectangleShape,
         colors = CardDefaults.cardColors(containerColor = cardColor)
     ) {
@@ -51,7 +52,9 @@ fun CustomCard(content: @Composable () -> Unit) {
                     .fillMaxHeight()
                     .background(color = indicatorColor)
             )
-            content()
+            SelectionContainer {
+                content()
+            }
         }
     }
 }

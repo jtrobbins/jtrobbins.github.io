@@ -2,16 +2,15 @@ package com.jtrobbins.mywebsite.presentation.feature.resume
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.DividerDefaults
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import com.jtrobbins.mywebsite.presentation.common.components.CategoryItem
+import com.jtrobbins.mywebsite.presentation.common.components.EducationCard
+import com.jtrobbins.mywebsite.presentation.common.components.ExperienceCard
 import com.jtrobbins.mywebsite.presentation.common.components.Footer
+import com.jtrobbins.mywebsite.presentation.common.components.PublicationCard
 
 @Composable
 fun ResumeScreen() {
@@ -21,51 +20,51 @@ fun ResumeScreen() {
             .fillMaxSize()
             .verticalScroll(scrollState)
     ) {
-        Text(
-            text = "Education",
-            modifier = Modifier.padding(start = 16.dp)
-        )
-        HorizontalDivider(
-            modifier = Modifier.padding(vertical = 8.dp),
-            thickness = DividerDefaults.Thickness,
-            color = DividerDefaults.color
-        )
-        Text(
-            text = "Experience",
-            modifier = Modifier.padding(start = 16.dp)
-        )
-        HorizontalDivider(
-            modifier = Modifier.padding(vertical = 8.dp),
-            thickness = DividerDefaults.Thickness,
-            color = DividerDefaults.color
-        )
-        Text(
-            text = "Publications",
-            modifier = Modifier.padding(start = 16.dp)
-        )
-        HorizontalDivider(
-            modifier = Modifier.padding(vertical = 8.dp),
-            thickness = DividerDefaults.Thickness,
-            color = DividerDefaults.color
-        )
-        Text(
-            text = "Skills",
-            modifier = Modifier.padding(start = 16.dp)
-        )
-        HorizontalDivider(
-            modifier = Modifier.padding(vertical = 8.dp),
-            thickness = DividerDefaults.Thickness,
-            color = DividerDefaults.color
-        )
-        Text(
-            text = "Awards",
-            modifier = Modifier.padding(start = 16.dp)
-        )
-        HorizontalDivider(
-            modifier = Modifier.padding(vertical = 8.dp),
-            thickness = DividerDefaults.Thickness,
-            color = DividerDefaults.color
-        )
+        CategoryItem(title = "Education") {
+            EducationCard(
+                degree = "B.S. in Computer Science",
+                school = "University of Maryland, College Park",
+                concentration = null,
+                date = "Jan 2017 - Dec 2020",
+                location = "College Park, Maryland"
+            )
+            EducationCard(
+                degree = "B.F.A in Visual Effects",
+                school = "Savannah College of Art and Design",
+                concentration = "Technical Direction",
+                date = "Sep 2010 - May 2014",
+                location = "Savannah, Georgia"
+            )
+        }
+        CategoryItem(title = "Experience") {
+            ExperienceCard(
+                position = "Software Developer II",
+                company = "Henry M. Jackson Foundation for the Advancement of Military Medicine",
+                support = "Supporting the Biotechnology High Performance Computing Software Applications Institute",
+                date = "Oct 2021 - Present",
+                location = "Frederick, Maryland"
+            )
+            ExperienceCard(
+                position = "Software Developer I",
+                company = "Henry M. Jackson Foundation for the Advancement of Military Medicine",
+                support = "Supporting the Biotechnology High Performance Computing Software Applications Institute",
+                date = "Jan 2021 - Sep 2021",
+                location = "Frederick, Maryland"
+            )
+        }
+        CategoryItem(title = "Publications") {
+            PublicationCard(
+                title = "A case study of AI-enabled Software as a Medical Device cleared by the FDA for assessing hemorrhage risk index (APPRAISE-HRI) after trauma.",
+                authors = "Frock, A., J. T. Robbins, F. G. Vital-Lopez, V. Desai, G. Doros, B. E. Sands, A. Prabhakaran, C. Nemeth, G. T. Rule, J. L. Sperry, F. X. Guyette, S. R. Wisniewski, E. E. Moore, M. Schreiber, B. Joseph, C. T. Wilson, B. Cotton, D. Ostermayer, B. G. Harbrecht, M. B. Patel, S. Tamang, S. Malunjkar, D. A. Spain, A. T. Reisner, J. D. Stallings, and J. Reifman. ",
+                publication = "New England Journal of Medicine AI. 2025 October 16; 2(11):AIcs2401170."
+            )
+        }
+        CategoryItem(title = "Skills") {
+
+        }
+        CategoryItem(title = "Awards") {
+
+        }
         Footer()
     }
 }

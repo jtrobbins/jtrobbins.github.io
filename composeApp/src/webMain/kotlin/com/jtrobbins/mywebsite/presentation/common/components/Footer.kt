@@ -11,7 +11,12 @@ import androidx.compose.ui.text.style.TextAlign
 fun Footer() {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(
-            text = "Made by Jeff using Compose Multiplatform",
+            text = "©2026 - Jeff Robbins",
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center
+        )
+        Text(
+            text = "Made with Compose Multiplatform",
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center
         )
