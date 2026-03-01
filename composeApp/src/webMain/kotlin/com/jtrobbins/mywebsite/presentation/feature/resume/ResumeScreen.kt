@@ -6,13 +6,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.jtrobbins.mywebsite.presentation.common.components.AwardCard
-import com.jtrobbins.mywebsite.presentation.common.components.CategoryItem
-import com.jtrobbins.mywebsite.presentation.common.components.EducationCard
-import com.jtrobbins.mywebsite.presentation.common.components.ExperienceCard
-import com.jtrobbins.mywebsite.presentation.common.components.Footer
-import com.jtrobbins.mywebsite.presentation.common.components.PublicationCard
-import com.jtrobbins.mywebsite.presentation.common.components.SkillCard
+import com.jtrobbins.mywebsite.presentation.common.components.*
 
 @Composable
 fun ResumeScreen() {
@@ -22,6 +16,7 @@ fun ResumeScreen() {
             .fillMaxSize()
             .verticalScroll(scrollState)
     ) {
+        LinksRow()
         CategoryItem(title = "Education") {
             EducationCard(
                 degree = "B.S. in Computer Science",

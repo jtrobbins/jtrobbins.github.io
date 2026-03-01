@@ -30,6 +30,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(libs.androidx.navigation.compose)
+            implementation("org.jetbrains.kotlinx:kotlinx-browser:0.5.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

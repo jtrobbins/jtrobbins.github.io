@@ -18,7 +18,7 @@ fun Footer() {
             textAlign = TextAlign.Center
         )
         Text(
-            text = "Made with Compose Multiplatform",
+            text = "Made with Kotlin Multiplatform",
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 16.dp),
