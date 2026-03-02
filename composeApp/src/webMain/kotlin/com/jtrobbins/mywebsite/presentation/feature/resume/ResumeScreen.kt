@@ -16,7 +16,6 @@ fun ResumeScreen() {
             .fillMaxSize()
             .verticalScroll(scrollState)
     ) {
-        LinksRow()
         CategoryItem(title = "Education") {
             EducationCard(
                 degree = "B.S. in Computer Science",
@@ -53,13 +52,18 @@ fun ResumeScreen() {
             PublicationCard(
                 authors = "Frock, A., J. T. Robbins, F. G. Vital-Lopez, V. Desai, G. Doros, B. E. Sands, A. Prabhakaran, C. Nemeth, G. T. Rule, J. L. Sperry, F. X. Guyette, S. R. Wisniewski, E. E. Moore, M. Schreiber, B. Joseph, C. T. Wilson, B. Cotton, D. Ostermayer, B. G. Harbrecht, M. B. Patel, S. Tamang, S. Malunjkar, D. A. Spain, A. T. Reisner, J. D. Stallings, and J. Reifman. ",
                 title = "A case study of AI-enabled Software as a Medical Device cleared by the FDA for assessing hemorrhage risk index (APPRAISE-HRI) after trauma.",
-                publication = "New England Journal of Medicine AI. 2025 October 16; 2(11):AIcs2401170."
+                publication = "New England Journal of Medicine AI. 2025 October 16; 2(11):AIcs2401170.",
+                url = "https://ai.nejm.org/doi/full/10.1056/AIcs2401170"
             )
         }
         CategoryItem(title = "Skills") {
             SkillCard(
                 category = "Programming:",
-                skills = listOf("Kotlin", "Python", "Dart", "Java", "SQL")
+                skills = listOf("Kotlin", "Java", "Python", "Dart", "SQL")
+            )
+            SkillCard(
+                category = "AI/ML:",
+                skills = listOf("ONNX", "ONNX Runtime", "Triton Inference Server")
             )
             SkillCard(
                 category = "Tools:",

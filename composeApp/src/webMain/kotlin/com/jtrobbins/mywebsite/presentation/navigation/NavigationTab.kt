@@ -16,6 +16,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.jtrobbins.mywebsite.presentation.common.components.LinksRow
 import com.jtrobbins.mywebsite.presentation.feature.home.HomeScreen
 import com.jtrobbins.mywebsite.presentation.feature.resume.ResumeScreen
 
@@ -93,6 +94,7 @@ fun HeaderWithTabs() {
             thickness = DividerDefaults.Thickness,
             color = DividerDefaults.color
         )
+        LinksRow()
         AppNavHost(
             navController = navController,
             startDestination = startDestination

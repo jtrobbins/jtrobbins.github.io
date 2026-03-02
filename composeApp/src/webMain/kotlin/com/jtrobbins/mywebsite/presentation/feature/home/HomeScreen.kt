@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import com.jtrobbins.mywebsite.presentation.common.components.CategoryItem
 import com.jtrobbins.mywebsite.presentation.common.components.DescriptionCard
 import com.jtrobbins.mywebsite.presentation.common.components.Footer
-import com.jtrobbins.mywebsite.presentation.common.components.LinksRow
 
 @Composable
 fun HomeScreen() {
@@ -19,7 +18,6 @@ fun HomeScreen() {
             .fillMaxSize()
             .verticalScroll(scrollState)
     ) {
-        LinksRow()
         CategoryItem(title = null) {
             DescriptionCard(
                 description = "Full-Stack Software Developer\n" +
